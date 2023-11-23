@@ -4,9 +4,9 @@ import React from "react";
 function Footer() {
   return (
     <div className="bg-black text-gray-400 md:pb-96 ">
-      <div className="flex h-96  text-2xl w-full justify-around md:text-xl md:flex-col md:h-screen">
+      <div className="flex h-96  text-xl w-full justify-around md:text-xl md:flex-col md:h-screen">
         <div className="mt-10  w-1/4">
-          <h1 className="text-4xl rounded-3xl p-2  w-4/6 font-bold italic bg-white text-black">
+          <h1 className="text-2xl rounded-3xl p-2  w-4/6 font-bold italic bg-white text-black">
             Home.net
           </h1>
           <p className="mt-5 line-clamp-6">
@@ -17,7 +17,7 @@ function Footer() {
           </p>
         </div>
         <div className="mt-10">
-          <h1 className="text-4xl font-bold text-white ">Useful links</h1>
+          <h1 className="text-2xl font-bold text-white ">Useful links</h1>
           <div className="mt-5">
             <li className="list-none my-5 hover:text-white">
               <Link>About Us</Link>
@@ -35,7 +35,7 @@ function Footer() {
         </div>
 
         <div className="mt-10">
-          <h1 className="text-4xl font-bold text-white ">Services</h1>
+          <h1 className="text-2xl font-bold text-white ">Services</h1>
           <div className="mt-5">
             <li className="list-none my-5 hover:text-white">
               <Link>Web Development</Link>
@@ -52,7 +52,7 @@ function Footer() {
           </div>
         </div>
         <div className="mt-10">
-          <h1 className="text-4xl font-bold text-white ">Contact Info</h1>
+          <h1 className="text-2xl font-bold text-white ">Contact Info</h1>
           <div className="mt-5">
             <li className="list-none my-5">Address: Oromia,Adama</li>
             <li className="list-none my-5 ">
