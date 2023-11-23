@@ -8,13 +8,15 @@ import Service from "./pages/service";
 import Login from "./pages/login";
 import Signup from "./pages/signup";
 import Contact from "./pages/contact";
+import Customer from "./pages/user/customer";
 import { useState } from "react";
 function App() {
   const [move, setMove] = useState(0);
   return (
     <div className="bg-gray-200 dark:text-gray-50 dark:bg-slate-900 duration-100 font-serif">
       <Router>
-        <Header />
+        <Customer/>
+        {/* <Header />
         <Routes>
           <Route path="" element={<Home />} />
           <Route path="/about" element={<About />} />
@@ -22,8 +24,9 @@ function App() {
           <Route path="/login" element={<Login />} />
           <Route path="/signUp" element={<Signup />} />
           <Route path="/contact" element={<Contact/>}/>
+          <Route path="/user" element={<Customer/>}/>
         </Routes>
-        <Footer/>
+        <Footer/> */}
       </Router>
     </div>
   );

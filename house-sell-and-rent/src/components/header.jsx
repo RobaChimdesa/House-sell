@@ -15,6 +15,7 @@ export default function Header() {
     { path: "/login", name: "Login" },
     { path: "/signUp", name: "Sign Up" },
     {path:"/contact", name:"Contact"},
+    {path:"/user", name:"User"}
   ];
 
   const [color, setColor] = useState(false);
