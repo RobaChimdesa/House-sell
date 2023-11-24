@@ -1,16 +1,16 @@
 import { useState } from "react";
 import React from "react";
 import { Link } from "react-router-dom";
-import SearchIcon from '@mui/icons-material/Search';
-import CloseIcon from '@mui/icons-material/Close';
-import ArrowDropDownIcon from '@mui/icons-material/ArrowDropDown';
-import KeyboardArrowRightIcon from '@mui/icons-material/KeyboardArrowRight';
+import SearchIcon from "@mui/icons-material/Search";
+import CloseIcon from "@mui/icons-material/Close";
+import ArrowDropDownIcon from "@mui/icons-material/ArrowDropDown";
+import KeyboardArrowRightIcon from "@mui/icons-material/KeyboardArrowRight";
 function Customer() {
   const menuitem = [
     { path: "/", name: "Home" },
     { path: "/editProfile", name: "Edit Profile" },
     { path: "/post", name: "Upload File" },
-    { path: "/view",arrow:<KeyboardArrowRightIcon/>, name: "View File" },
+    { path: "/view", arrow: <KeyboardArrowRightIcon />, name: "View File" },
     { path: "/update", name: "Update File" },
     { path: "/settings", name: "Settings" },
   ];
@@ -30,25 +30,31 @@ function Customer() {
           </div>
         </div>
 
-        <div>
+        <div className="md:hidden">
           <Link>
             <h1>Post home</h1>
           </Link>
         </div>
-        <div className=" flex justify-around rounded-2xl bg-white text-black items-center w-1/4 h-8">
-            <SearchIcon/>
-          <input
-            type="serch"
-            placeholder="search home "
-            className="transparent "
-          />
+        
+        <div>
+          <form className="relative bg-white rounded-full">
+            <input
+              type="search"
+              placeholder="search home..."
+              className="p-1 text-black w-full  bg-transparent outline-none "
+            />
+            <button className="absolute text-black bg-slate-50 rounded-full right-1 top-1/2 p-1 -translate-y-1/2">
+              <SearchIcon />
+            </button>
+          </form>
         </div>
+
         <div>
           <div className="flex">
             <img
               src="home14.jpg "
               onClick={changeMenu}
-              className={`rounded-full  w-14 h-14 ${!menu && "mr-36"}`}
+              className={`rounded-full  w-14 h-14 md:w-10 md:h-10 ${!menu && "mr-36 md:mr-24"}`}
             />
             {menu ? (
               <div></div>
@@ -59,8 +65,13 @@ function Customer() {
                   setMenu(true);
                 }}
               >
-            <CloseIcon/>  
-
+                <div
+                  className="p-1 hover:bg-slate-500 
+            rounded-lg"
+                >
+                  {" "}
+                  <CloseIcon />
+                </div>
               </div>
             )}
           </div>
@@ -68,7 +79,7 @@ function Customer() {
       </div>
       {menuitem.map((item, i) => {
         return (
-          <div className=" ml-96 pl-64 ">
+          <div className=" ml-96 md:pr-28 pl-64 md:ml-0 md:pl-0 ">
             <li
               key={i}
               onClick={() => {
@@ -80,7 +91,10 @@ function Customer() {
                 menu && "hidden"
               }`}
             >
-              <Link path={item.path}> {item.name} {' '} {item.arrow}</Link>
+              <Link path={item.path}>
+                {" "}
+                {item.name} {item.arrow}
+              </Link>
             </li>
           </div>
         );
